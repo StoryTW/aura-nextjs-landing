@@ -1,0 +1,19 @@
+.section {
+  margin-bottom: 100px;
+}
+
+// .wrapper {
+//   padding: 100px 0px;
+// }
+
+.title {
+  color: var(--white);
+  margin-bottom: 30px;
+  @include Rubik_40_600;
+}
+
+.list {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}

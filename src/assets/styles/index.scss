@@ -1,2 +1,12 @@
-@use './consts.scss';
-@use './globals.scss';
+@forward 'consts';
+@forward 'globals';
+
+.body {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 0px 72px;
+}

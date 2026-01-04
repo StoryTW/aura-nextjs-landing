@@ -1,0 +1,52 @@
+.card {
+  background-image: var(--linear-card-advantage);
+  border-radius: 18px;
+  display: grid;
+  grid-template-columns: minmax(100px, 241px);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    padding: 1px;
+    border-radius: 20px;
+
+    /* Градиент бордера */
+    background: linear-gradient(to right bottom, #686868, #808080, #999999, #070C0F, #070C0F);
+
+    /* Маска: прозрачность нарастает справа */
+    -webkit-mask-image: linear-gradient(to right, #000 70%, transparent 100%);
+    mask-image: linear-gradient(to right, #000 70%, transparent 100%);
+
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+
+    z-index: -1;
+  }
+}
+
+.wrapper {
+  padding: 14px;
+}
+
+.infoWrp {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.text {
+  color: var(--white);
+  opacity: 0.9;
+
+  @include Nunito_16_400;
+}
+
+.count {
+  color: var(--white);
+  opacity: 0.23;
+
+  @include Nunito_14_400;
+}

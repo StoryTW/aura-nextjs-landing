@@ -1,0 +1,57 @@
+.btn {
+  color: var(--white);
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+
+  @include Nunito_20_400;
+  @include transition;
+
+  &.primary {
+    background-color: var(--btn-color-primary);
+
+    &:hover {
+      background: var(--btn-color-primary-hover);
+    }
+
+    &:focus {
+      background: var(--btn-color-primary-hover);
+    }
+
+    &:active {
+      background: var(--btn-color-primary-hover);
+    }
+
+    &:disabled {
+      background: var(--btn-color-primary-disabled);
+    }
+  }
+
+  &.secondary {
+    background-color: var(--btn-color-secondary);
+
+    &:hover {
+      background: var(--btn-color-secondary-hover);
+    }
+
+    &:focus {
+      background: var(--btn-color-secondary-hover);
+    }
+
+    &:active {
+      background: var(--btn-color-secondary-hover);
+    }
+
+    &:disabled {
+      background: var(--btn-color-secondary-disabled);
+    }
+  }
+
+  &.s {
+    padding: 16px;
+  }
+
+  &.l {
+    padding: 24px;
+  }
+}

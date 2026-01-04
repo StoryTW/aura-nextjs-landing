@@ -128,37 +128,98 @@
 }
 
 //Typography
-@mixin CreatoDisplay_24_900 {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 135%;
-}
-
-@mixin CreatoDisplay_24_500 {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 135%;
-}
-
-@mixin CreatoDisplay_32_900 {
+@mixin Rubik_32_600 {
   font-size: 32px;
+  font-family: var(--font-rubik);
   font-style: normal;
-  font-weight: 900;
-  line-height: 135%;
+  font-weight: 600;
+  line-height: normal;
 }
 
-@mixin CreatoDisplay_48_900 {
-  font-size: 48px;
+@mixin Rubik_40_600 {
+  font-size: 40px;
+  font-family: var(--font-rubik);
   font-style: normal;
-  font-weight: 900;
-  line-height: 135%;
+  font-weight: 600;
+  line-height: normal;
 }
 
-@mixin CreatoDisplay_48_700 {
-  font-size: 48px;
+@mixin Rubik_52_600 {
+  font-size: 52px;
+  font-family: var(--font-rubik);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@mixin Nunito_20_400 {
+  font-size: 20px;
+  font-family: var(--font-nunito);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin Nunito_20_600 {
+  font-size: 20px;
+  font-family: var(--font-nunito);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@mixin Nunito_22_300 {
+  font-size: 22px;
+  font-family: var(--font-nunito);
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+@mixin Nunito_24_700 {
+  font-size: 24px;
+  font-family: var(--font-nunito);
   font-style: normal;
   font-weight: 700;
-  line-height: 135%;
+  line-height: normal;
+}
+
+@mixin Nunito_16_400 {
+  font-size: 16px;
+  font-family: var(--font-nunito);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin Nunito_16_300 {
+  font-size: 16px;
+  font-family: var(--font-nunito);
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+@mixin Nunito_16_500 {
+  font-size: 16px;
+  font-family: var(--font-nunito);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@mixin Nunito_14_300 {
+  font-size: 14px;
+  font-family: var(--font-nunito);
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+@mixin Nunito_14_400 {
+  font-size: 14px;
+  font-family: var(--font-nunito);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }

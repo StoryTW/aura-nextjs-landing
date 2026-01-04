@@ -1,0 +1,16 @@
+.section {
+  margin-bottom: 100px;
+}
+
+.title {
+  color: var(--white);
+  margin-bottom: 30px;
+  // text-align: center;
+  @include Rubik_40_600;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
