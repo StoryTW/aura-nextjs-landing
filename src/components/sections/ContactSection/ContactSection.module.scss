@@ -1,0 +1,47 @@
+.section {
+  margin-bottom: 100px;
+}
+
+.content {
+  background-color: var(--background-contact);
+  border-radius: 20px;
+}
+
+.contentWrapper {
+  padding: 22px 68px 30px;
+}
+
+.title {
+  color: var(--white);
+  margin-bottom: 30px;
+  text-align: center;
+
+  @include Rubik_40_600;
+}
+
+.helper {
+  color: var(--white-30);
+  text-align: center;
+
+  @include Nunito_14_300;
+}
+
+.card_two {
+  background-color: #192124;
+  opacity: 0.6;
+  width: 100%;
+  max-width: 1240px;
+  height: 18px;
+  margin: 0 auto;
+  border-radius: 0px 0px 32px 32px;
+}
+
+.card_three {
+  background-color: #192124;
+  opacity: 0.4;
+  width: 100%;
+  max-width: 1180px;
+  height: 18px;
+  margin: 0 auto;
+  border-radius: 0px 0px 32px 32px;
+}

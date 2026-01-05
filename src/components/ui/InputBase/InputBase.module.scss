@@ -1,0 +1,61 @@
+.inputContainer {
+  width: 100%;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  background-color: transparent;
+  border: 2px solid var(--border-gray);
+
+  input {
+    padding: 16px 16px 16px 30px;
+    // border: 2px solid var(--border-gray);
+    // background-size: 20px;
+    // border-radius: 6px;
+    width: 100%;
+    color: var(--white);
+
+    @include Nunito_16_400;
+    @include transition;
+
+    &:hover {
+      /* background-color: var(--white); */
+      /* border: 1px solid var(--white); */
+    }
+
+    &:disabled {
+      // color: var(--background_ticker);
+      // text-indent: -9999px;
+    }
+
+    &:focus {
+      /* border: 1px solid var(--white); */
+      /* background-color: #ffffff; */
+    }
+
+    &:active {
+      /* border: 1px solid var(--white); */
+      /* background-color: var(--white); */
+    }
+
+    &::placeholder {
+      color: var(--white-60);
+    }
+
+    &.invalid {
+      border: 2px solid var(--red);
+    }
+  }
+}
+
+.icon {
+  margin-right: 16px;
+  padding: 8px;
+  border: 2px solid var(--border-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

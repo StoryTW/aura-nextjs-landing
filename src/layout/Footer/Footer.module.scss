@@ -1,7 +1,47 @@
 .footer {
-  background-color: var(--backgound-second);
+  background-color: var(--background-second);
 }
 
 .wrapper {
   padding: 36px 0px 24px;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid var(--white-05);
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.contactsList {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+
+  li {
+    color: var(--white);
+
+    @include Nunito_16_300;
+  }
+}
+
+.contactsTitle {
+  display: block;
+  color: var(--white-40);
+  margin-bottom: 8px;
+
+  @include Nunito_14_300;
+}
+
+.docs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: var(--white-40);
+
+  @include Nunito_16_200;
 }

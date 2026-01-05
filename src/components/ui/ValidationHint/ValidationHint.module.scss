@@ -1,0 +1,10 @@
+.message {
+  margin-left: 16px;
+  padding-top: 4px;
+
+  @include Nunito_14_400;
+  
+  &.error {
+    color: var(--red);
+  }
+}

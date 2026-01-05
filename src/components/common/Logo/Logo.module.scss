@@ -1,0 +1,11 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.text {
+  color: var(--white);
+
+  @include Nunito_36_500;
+}

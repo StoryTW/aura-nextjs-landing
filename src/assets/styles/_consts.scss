@@ -1,14 +1,19 @@
 :root {
   //Main
   --white: #ffffff;
+  --white-80: rgba(255, 255, 255, 0.8);
+  --white-60: rgba(255, 255, 255, 0.6);
+  --white-40: rgba(255, 255, 255, 0.4);
+  --white-30: rgba(255, 255, 255, 0.3);
+  --white-05: rgba(255, 255, 255, 0.05);
   --background-main: #070c0f;
-  --backgound-second: #0A0F12;
+  --background-second: #0A0F12;
+  --background-contact: #101618;
+  --border-gray: #1E282D;
+
   --blue: #4354f0;
   --light-blue: #4bb5cf;
-  --white-80: rgba(255, 255, 255, 0.8);
-
-  // --black: #000000;
-  // --gray: #8D8D8D;
+  --red: #ff5959;
 
   // Button colors
   --btn-color-primary: #4354f0;
