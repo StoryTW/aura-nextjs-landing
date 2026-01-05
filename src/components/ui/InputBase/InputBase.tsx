@@ -13,17 +13,18 @@ export const InputBase = forwardRef<HTMLInputElement, IInputBase>(
   ({ error, className, icon, ...props }, ref) => {
     return (
       <div className={styles.inputContainer}>
-        <div className={styles.inputWrapper}>
+        <div className={clsx(styles.inputWrapper, {
+          [styles.invalid]: error,
+        })}>
           <input
             ref={ref}
-            className={clsx(className, {
-              [styles.invalid]: error,
-            })}
+            className={className}
             {...props}
           />
 
           {icon && <div className={styles.icon}>{icon}</div>}
         </div>
+
         <ValidationHint errorMsg={error as string} />
       </div>
     );

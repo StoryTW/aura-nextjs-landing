@@ -23,7 +23,6 @@
 
     &:hover {
       /* background-color: var(--white); */
-      /* border: 1px solid var(--white); */
     }
 
     &:disabled {
@@ -32,22 +31,20 @@
     }
 
     &:focus {
-      /* border: 1px solid var(--white); */
       /* background-color: #ffffff; */
     }
 
     &:active {
-      /* border: 1px solid var(--white); */
       /* background-color: var(--white); */
     }
 
     &::placeholder {
       color: var(--white-60);
     }
+  }
 
-    &.invalid {
-      border: 2px solid var(--red);
-    }
+  &.invalid {
+    border: 2px solid var(--red);
   }
 }
 
@@ -58,4 +55,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 6px;
 }

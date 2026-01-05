@@ -3,6 +3,8 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import styles from './ContactForm.module.scss'
 import { InputBase } from "@/components/ui/InputBase/InputBase";
 import Image from "next/image";
+import { Button } from "@/components/ui/Button/Button";
+import { regExpHelper } from "@/utils/regExp.helper";
 
 type FormType = {
   site: string;
@@ -10,13 +12,35 @@ type FormType = {
   telegram: string;
 }
 
+const formValidation = {
+  site: {
+    required: 'Поле обязательно к заполнению',
+    pattern: {
+      value: regExpHelper('URL'),
+      message: 'Введите корректный URL',
+    },
+  },
+  email: {
+    required: 'Поле обязательно к заполнению',
+    pattern: {
+      value: regExpHelper('EMAIL'),
+      message: 'Введите корректный email',
+    },
+  },
+  telegram: {
+    required: 'Поле обязательно к заполнению',
+    pattern: {
+      value: regExpHelper('TELEGRAM'),
+      message: 'Введите корректный Telegram-никнейм (например, @username)',
+    },
+  },
+}
+
 export const ContactForm = () => {
   const {
+    formState: { errors },
     handleSubmit,
-    reset,
     register,
-    watch,
-    formState: { errors, isValid },
   } = useForm<FormType>({
     mode: "onChange",
     delayError: 1000,
@@ -36,15 +60,9 @@ export const ContactForm = () => {
 
       <div className={styles.inputsWrapper}>
         <InputBase
+          type="url"
           placeholder="Ваш сайт"
           error={errors.site?.message}
-          {...register('site')}
-        />
-
-        <InputBase
-          placeholder="Ваша почта"
-          // error={errors.email?.message}
-          error={'поле обязательно к заполнению'}
           icon={
             <Image
               src={'/images/contacts/network.svg'}
@@ -53,18 +71,52 @@ export const ContactForm = () => {
               alt="network"
             />
           }
-          {...register('email')}
+          {...register('site', formValidation.site)}
         />
 
         <InputBase
+          type="email"
+          placeholder="Ваша почта"
+          error={errors.email?.message}
+          icon={
+            <Image
+              src={'/images/contacts/mail.svg'}
+              width={18}
+              height={18}
+              alt="mail"
+            />
+          }
+          {...register('email', formValidation.email)}
+        />
+
+        <InputBase
+          type="text"
           placeholder="Ваш telegram"
           error={errors.telegram?.message}
-          {...register('telegram')}
+          icon={
+            <Image
+              src={'/images/contacts/telegram.svg'}
+              width={18}
+              height={18}
+              alt="telegram"
+            />
+          }
+          {...register('telegram', formValidation.telegram)}
         />
       </div>
 
       <div className={styles.buttonsWrapper}>
-        btns
+        <Button
+          size="l"
+          variant="primary"
+          type="submit"
+        >
+          Оставить заявку
+        </Button>
+
+        <Button size="l" variant="secondary">
+          Перейти в чат с менеджером
+        </Button>
       </div>
     </form>
   )

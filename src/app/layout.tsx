@@ -38,8 +38,10 @@ export default function RootLayout({
 }: IRootLayout) {
   return (
     <html lang="ru">
-      <body className={clsx('body', rubik.variable, nunito.variable)}>
-        {children}
+      <body className={clsx(rubik.variable, nunito.variable)}>
+        <div className="rootContainer">
+          {children}
+        </div>
 
         <Footer />
       </body>

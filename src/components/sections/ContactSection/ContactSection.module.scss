@@ -1,14 +1,19 @@
 .section {
   margin-bottom: 100px;
+  position: relative;
 }
 
 .content {
   background-color: var(--background-contact);
   border-radius: 20px;
+  background-image: url('/images/contacts/ellipse1.png'), url('/images/contacts/ellipse2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .contentWrapper {
-  padding: 22px 68px 30px;
+  padding: 32px 68px;
 }
 
 .title {
@@ -44,4 +49,15 @@
   height: 18px;
   margin: 0 auto;
   border-radius: 0px 0px 32px 32px;
+}
+
+.ellipse1 {
+  position: absolute;
+  top: 0px;
+  // right: 68px;
+  border-radius: 20px;
+  z-index: -1;
+  // width: 875px;
+  // height: 267px;
+  // object-fit: cover;
 }

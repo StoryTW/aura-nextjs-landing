@@ -1,8 +1,8 @@
-import { FC, HTMLAttributes, PropsWithChildren } from 'react'
+import { ButtonHTMLAttributes, FC, PropsWithChildren } from 'react'
 import clsx from 'clsx'
 import styles from './Button.module.scss'
 
-type TButton = TButtonProps & HTMLAttributes<HTMLButtonElement> & PropsWithChildren;
+type TButton = TButtonProps & PropsWithChildren & ButtonHTMLAttributes<HTMLButtonElement>;
 
 type TButtonProps = {
   size?: 's' | 'l';
@@ -17,7 +17,11 @@ export const Button: FC<TButton> = ({
   ...props
 }) => {
   return (
-    <button className={clsx(styles.btn, styles[variant], styles[size], className)} type='button' {...props}>
+    <button
+      className={clsx(styles.btn, styles[variant], styles[size], className)}
+      type='button'
+      {...props}
+    >
       {children}
     </button>
   )

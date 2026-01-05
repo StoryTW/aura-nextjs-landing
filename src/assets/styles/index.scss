@@ -1,12 +1,12 @@
 @forward 'consts';
 @forward 'globals';
 
-.body {
+.container {
+  padding: 0px 72px;
+}
+
+.rootContainer {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-}
-
-.container {
-  padding: 0px 72px;
 }

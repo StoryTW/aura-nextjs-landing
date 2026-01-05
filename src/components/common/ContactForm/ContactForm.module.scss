@@ -4,8 +4,15 @@
 
 .inputsWrapper {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   gap: 24px;
   margin-bottom: 36px;
+}
+
+.buttonsWrapper {
+  display: grid;
+  grid-template-columns: minmax(100px, 340px) minmax(100px, 340px);
+  justify-content: center;
+  gap: 32px;
 }
