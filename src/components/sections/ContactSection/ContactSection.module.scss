@@ -1,6 +1,14 @@
 .section {
-  margin-bottom: 100px;
   position: relative;
+  margin-bottom: 100px;
+
+  @include respond(tabletL) {
+    margin-bottom: 64px;
+  }
+
+  @include respond(mobileL) {
+    margin-bottom: 48px;
+  }
 }
 
 .content {
@@ -14,6 +22,18 @@
 
 .contentWrapper {
   padding: 32px 68px;
+
+  @include respond(laptop) {
+    padding: 32px 48px;
+  }
+
+  @include respond(tablet) {
+    padding: 24px;
+  }
+
+  @include respond(mobileL) {
+    padding: 16px;
+  }
 }
 
 .title {
@@ -22,6 +42,14 @@
   text-align: center;
 
   @include Rubik_40_600;
+
+  @include respond(tabletL) {
+    font-size: 32px;
+  }
+
+  @include respond(mobileL) {
+    font-size: 28px;
+  }
 }
 
 .helper {
@@ -35,29 +63,49 @@
   background-color: #192124;
   opacity: 0.6;
   width: 100%;
-  max-width: 1240px;
+  max-width: 1140px;
   height: 18px;
   margin: 0 auto;
   border-radius: 0px 0px 32px 32px;
+
+  @media only screen and (max-width: 1315px) {
+    max-width: 840px;
+  }
+
+  @include respond(laptop) {
+    max-width: 640px;
+  }
+
+  @include respond(tablet) {
+    display: none;
+  }
 }
 
 .card_three {
   background-color: #192124;
   opacity: 0.4;
   width: 100%;
-  max-width: 1180px;
+  max-width: 1080px;
   height: 18px;
   margin: 0 auto;
   border-radius: 0px 0px 32px 32px;
+
+  @media only screen and (max-width: 1315px) {
+    max-width: 780px;
+  }
+
+  @include respond(laptop) {
+    max-width: 440px;
+  }
+
+  @include respond(tablet) {
+    display: none;
+  }
 }
 
 .ellipse1 {
   position: absolute;
   top: 0px;
-  // right: 68px;
   border-radius: 20px;
   z-index: -1;
-  // width: 875px;
-  // height: 267px;
-  // object-fit: cover;
 }

@@ -8,6 +8,10 @@
   justify-content: space-between;
   gap: 24px;
   margin-bottom: 36px;
+
+  @include respond(tabletS) {
+    flex-direction: column;
+  }
 }
 
 .buttonsWrapper {
@@ -15,4 +19,12 @@
   grid-template-columns: minmax(100px, 340px) minmax(100px, 340px);
   justify-content: center;
   gap: 32px;
+
+  @include respond(tabletS) {
+    gap: 16px;
+  }
+
+  @include respond(mobileL) {
+    grid-template-columns: 1fr;
+  }
 }

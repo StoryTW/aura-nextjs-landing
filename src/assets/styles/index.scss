@@ -1,12 +1,24 @@
 @forward 'consts';
 @forward 'globals';
 
-.container {
-  padding: 0px 72px;
-}
-
 .rootContainer {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.container {
+  padding: 0px 72px;
+
+  @include respond(laptop) {
+    padding: 0px 36px;
+  }
+
+  @include respond(tabletL) {
+    padding: 0px 24px;
+  }
+
+  @include respond(mobileL) {
+    padding: 0px 16px;
+  }
 }

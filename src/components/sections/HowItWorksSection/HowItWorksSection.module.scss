@@ -1,0 +1,152 @@
+.section {
+  margin-bottom: 100px;
+  padding: 0px 24px;
+
+  @include respond(tabletL) {
+    margin-bottom: 64px;
+  }
+
+  @include respond(mobileL) {
+    padding: 0px 16px;
+    margin-bottom: 48px;
+  }
+}
+
+.content {
+  border-radius: 30px 30px 0px 0px;
+  background-color: var(--background-how-it-works);
+  background-image: url('/images/how-it-works/ellipse4.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+
+  @include respond(tablet) {
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  @include respond(tabletL) {
+    background-size: contain;
+    background-position: left bottom;
+  }
+}
+
+.contentWrapper {
+  padding: 56px 48px 34px 48px;
+
+  @include respond(laptop) {
+    padding: 36px;
+  }
+
+  @include respond(tablet) {
+    padding: 24px;
+  }
+
+  @include respond(mobileL) {
+    padding: 16px;
+  }
+}
+
+.contentWrapper2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 48px 40px 48px;
+  gap: 80px;
+
+  @include respond(laptop) {
+    padding: 36px;
+  }
+
+  @include respond(tabletL) {
+    gap: 40px;
+  }
+
+  @include respond(tabletSM) {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  @include respond(tablet) {
+    padding: 24px;
+  }
+
+  @include respond(mobileL) {
+    padding: 16px;
+  }
+}
+
+.title {
+  color: var(--white);
+  margin-bottom: 30px;
+
+  @include Rubik_40_600;
+
+  @include respond(laptop) {
+    text-align: center;
+  }
+
+  @include respond(tabletL) {
+    font-size: 32px;
+  }
+
+  @include respond(mobileL) {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+}
+
+.registerInfo {
+  background-color: var(--white);
+  border-radius: 0px 0px 30px 30px;
+  background-image: url('/images/how-it-works/arrow-line.svg');
+  background-repeat: no-repeat;
+  background-position: 76% 75%;
+
+  @include respond(tablet) {
+    border-radius: 0px 0px 20px 20px;
+  }
+
+  @include respond(tabletSM) {
+    background-image: none;
+  }
+}
+
+.infoTitle {
+  color: var(--black_3e);
+  margin-bottom: 6px;
+
+  @include Nunito_32_600;
+
+  span {
+    color: var(--blue);
+  }
+
+  @include respond(tabletL) {
+    font-size: 28px;
+  }
+
+  @include respond(mobileL) {
+    font-size: 24px;
+  }
+}
+
+.infoDescription {
+  color: var(--black_60);
+  max-width: 794px;
+
+  @include Nunito_16_500;
+}
+
+.cardList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 408px));
+  gap: 32px;
+
+  @include respond(laptop) {
+    gap: 16px;
+  }
+
+  @include respond(tabletL) {
+    grid-template-columns: 1fr;
+  }
+}

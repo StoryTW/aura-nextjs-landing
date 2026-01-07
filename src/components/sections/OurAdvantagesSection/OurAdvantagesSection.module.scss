@@ -1,5 +1,13 @@
 .section {
   margin-bottom: 100px;
+
+  @include respond(tabletL) {
+    margin-bottom: 64px;
+  }
+
+  @include respond(mobileL) {
+    margin-bottom: 48px;
+  }
 }
 
 // .wrapper {
@@ -9,11 +17,30 @@
 .title {
   color: var(--white);
   margin-bottom: 30px;
+
   @include Rubik_40_600;
+
+  @include respond(tabletL) {
+    font-size: 32px;
+  }
+
+  @include respond(mobileL) {
+    font-size: 28px;
+  }
 }
 
 .list {
   display: flex;
   gap: 22px;
   flex-wrap: wrap;
+
+  @include respond(tabletS) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(mobileL) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }

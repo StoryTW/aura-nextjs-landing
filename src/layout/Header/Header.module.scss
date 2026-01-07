@@ -1,0 +1,31 @@
+.header {
+  margin-bottom: 60px;
+
+  @include respond(laptop) {
+    margin-bottom: 24px;
+  }
+
+  @include respond(mobileL) {
+    margin-bottom: 16px;
+  }
+}
+
+.wrapper {
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.btn {
+  width: 178px;
+
+  @include respond(laptop) {
+    width: auto;
+  }
+
+  @include respond(tablet) {
+    width: 178px;
+  }
+}

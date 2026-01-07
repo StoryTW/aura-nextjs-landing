@@ -7,6 +7,10 @@
   @include Nunito_20_400;
   @include transition;
 
+  @include respond(tabletS) {
+    font-size: 18px;
+  }
+
   &.primary {
     background-color: var(--btn-color-primary);
 
@@ -49,9 +53,17 @@
 
   &.s {
     padding: 16px;
+
+    @include respond(tabletS) {
+      padding: 12px;
+    }
   }
 
   &.l {
     padding: 24px;
+
+    @include respond(tabletS) {
+      padding: 16px;
+    }
   }
 }

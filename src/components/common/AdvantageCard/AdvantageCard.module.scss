@@ -1,9 +1,14 @@
 .card {
-  background-image: var(--linear-card-advantage);
+  position: relative;
   border-radius: 18px;
   display: grid;
   grid-template-columns: minmax(100px, 241px);
-  position: relative;
+  background-image: var(--linear-card-advantage);
+
+  @include respond(tabletS) {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
 
   &::before {
     content: '';
@@ -13,7 +18,7 @@
     border-radius: 20px;
 
     /* Градиент бордера */
-    background: linear-gradient(to right bottom, #686868, #808080, #999999, #070C0F, #070C0F);
+    background: linear-gradient(to right bottom, #686868, #808080, #999999, #070c0f, #070c0f);
 
     /* Маска: прозрачность нарастает справа */
     -webkit-mask-image: linear-gradient(to right, #000 70%, transparent 100%);

@@ -1,0 +1,58 @@
+.card {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.04));
+  border-radius: 20px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8px;
+
+  @media only screen and (max-width: 1300px) {
+    img {
+      object-fit: contain;
+      overflow: hidden;
+    }
+  }
+
+  @include respond(mobileL) {
+    img {
+      width: 300px;
+    }
+  }
+
+  @include respond(mobile360) {
+    img {
+      width: 240px;
+    }
+  }
+}
+
+.textWrapper {
+  padding: 0px 20px 20px;
+}
+
+.title {
+  color: var(--white);
+  margin-bottom: 8px;
+
+  @include Nunito_24_700;
+
+  @include respond(mobileL) {
+    font-size: 20px;
+  }
+}
+
+.description {
+  color: var(--white);
+
+  @include Nunito_16_400;
+}

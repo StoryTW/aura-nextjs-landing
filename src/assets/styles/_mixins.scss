@@ -1,37 +1,7 @@
 // Media Queries Mixins
 @mixin respond($breakpoint) {
-  @if $breakpoint==laptopXL {
-    @media only screen and (max-width: 2560px) {
-      @content;
-    }
-  }
-
-  @if $breakpoint==laptopXG {
-    @media only screen and (max-width: 1560px) {
-      @content;
-    }
-  }
-
-  @if $breakpoint==laptopG {
-    @media only screen and (max-width: 1540px) {
-      @content;
-    }
-  }
-
   @if $breakpoint==laptopL {
     @media only screen and (max-width: 1440px) {
-      @content;
-    }
-  }
-
-  @if $breakpoint==laptopB {
-    @media only screen and (max-width: 1250px) {
-      @content;
-    }
-  }
-
-  @if $breakpoint==laptopC {
-    @media only screen and (max-width: 1150px) {
       @content;
     }
   }
@@ -60,20 +30,8 @@
     }
   }
 
-  @if $breakpoint==tabletS {
-    @media only screen and (max-width: 744px) {
-      @content;
-    }
-  }
-
-  @if $breakpoint==tabletContainer {
-    @media only screen and (max-width: 704px) {
-      @content;
-    }
-  }
-
   @if $breakpoint==tabletSM {
-    @media only screen and (max-width: 602px) {
+    @media only screen and (max-width: 744px) {
       @content;
     }
   }
@@ -237,5 +195,13 @@
   font-family: var(--font-nunito);
   font-style: normal;
   font-weight: 500;
+  line-height: normal;
+}
+
+@mixin Nunito_32_600 {
+  font-size: 32px;
+  font-family: var(--font-nunito);
+  font-style: normal;
+  font-weight: 600;
   line-height: normal;
 }

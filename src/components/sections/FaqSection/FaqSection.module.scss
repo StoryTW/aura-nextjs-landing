@@ -1,5 +1,13 @@
 .section {
   margin-bottom: 100px;
+
+  @include respond(tabletL) {
+    margin-bottom: 64px;
+  }
+
+  @include respond(mobileL) {
+    margin-bottom: 48px;
+  }
 }
 
 .title {
@@ -7,6 +15,14 @@
   margin-bottom: 30px;
   // text-align: center;
   @include Rubik_40_600;
+
+  @include respond(tabletL) {
+    font-size: 32px;
+  }
+
+  @include respond(mobileL) {
+    font-size: 28px;
+  }
 }
 
 .list {

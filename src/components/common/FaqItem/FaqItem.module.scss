@@ -6,6 +6,10 @@
   background: var(--linear-card-faq);
   overflow: hidden;
 
+  @include respond(tabletL) {
+    padding: 18px 12px 18px 24px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -56,6 +60,10 @@
   color: var(--white);
 
   @include Nunito_20_600;
+
+  @include respond(tabletL) {
+    font-size: 18px;
+  }
 }
 
 .answerText {
