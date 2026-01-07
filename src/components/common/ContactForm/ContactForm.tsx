@@ -1,10 +1,12 @@
 'use client';
-import { SubmitHandler, useForm } from "react-hook-form";
-import styles from './ContactForm.module.scss'
-import { InputBase } from "@/components/ui/InputBase/InputBase";
 import Image from "next/image";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { InputBase } from "@/components/ui/InputBase/InputBase";
 import { Button } from "@/components/ui/Button/Button";
 import { regExpHelper } from "@/utils/regExp.helper";
+import { ButtonLink } from "@/components/ui/ButtonLink/ButtonLink";
+import { CONTACT_MANAGER } from "@/utils/links";
+import styles from './ContactForm.module.scss'
 
 type FormType = {
   site: string;
@@ -114,9 +116,14 @@ export const ContactForm = () => {
           Оставить заявку
         </Button>
 
-        <Button size="l" variant="secondary">
+        <ButtonLink
+          href={CONTACT_MANAGER}
+          variant='secondary'
+          size='l'
+          target='_blank'
+        >
           Перейти в чат с менеджером
-        </Button>
+        </ButtonLink>
       </div>
     </form>
   )

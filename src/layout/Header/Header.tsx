@@ -1,7 +1,8 @@
 import { Logo } from '@/components/common/Logo/Logo'
-import styles from './Header.module.scss'
-import { Button } from '@/components/ui/Button/Button'
 import { Navbar } from './Navbar/Navbar'
+import { ButtonLink } from '@/components/ui/ButtonLink/ButtonLink'
+import { LOGIN_LINK } from '@/utils/links'
+import styles from './Header.module.scss'
 
 export const Header = () => {
   return (
@@ -11,9 +12,15 @@ export const Header = () => {
 
         <Navbar />
 
-        <Button variant='primary' size='s' className={styles.btn}>
+        <ButtonLink
+          href={LOGIN_LINK}
+          variant='primary'
+          size='s'
+          target='_blank'
+          className={styles.link}
+        >
           Войти
-        </Button>
+        </ButtonLink>
       </div>
     </header>
   )

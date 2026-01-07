@@ -27,7 +27,7 @@ const DATA = [
 
 export default function OurAdvantagesSection() {
   return (
-    <section className={clsx('container', styles.section)}>
+    <section id='advantages' className={clsx('container', styles.section)}>
       {/* <div className={styles.wrapper}> */}
       <h2 className={styles.title}>Наши преимущества</h2>
 

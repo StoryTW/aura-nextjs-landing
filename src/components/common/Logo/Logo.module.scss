@@ -2,10 +2,25 @@
   display: flex;
   align-items: center;
   gap: 10px;
+
+  @include respond(tablet) {
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
 }
 
 .text {
   color: var(--white);
 
   @include Nunito_36_500;
+
+  @include respond(tablet) {
+    font-size: 28px;
+  }
+
+  @include respond(mobileL) {
+    font-size: 24px;
+  }
 }

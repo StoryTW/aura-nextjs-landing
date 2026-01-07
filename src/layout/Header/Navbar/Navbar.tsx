@@ -8,19 +8,19 @@ const NAV = [
   },
   {
     name: 'Преимущества ',
-    link: '/'
+    link: '#advantages'
   },
   {
     name: 'Интеграция',
-    link: '/'
+    link: '#contact'
   },
   {
     name: 'FAQ',
-    link: '/'
+    link: '#faq'
   },
   {
     name: 'Контакты',
-    link: '/'
+    link: '#footer'
   },
 ]
 

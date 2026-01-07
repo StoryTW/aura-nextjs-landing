@@ -1,10 +1,10 @@
 import clsx from 'clsx'
-import styles from './ContactSection.module.scss'
 import { ContactForm } from '@/components/common/ContactForm/ContactForm'
+import styles from './ContactSection.module.scss'
 
 export default function ContactSection() {
   return (
-    <section className={clsx('container', styles.section)}>
+    <section id='contact' className={clsx('container', styles.section)}>
       <div className={styles.content}>
         <div className={styles.contentWrapper}>
           <h2 className={styles.title}>Свяжитесь с нами</h2>

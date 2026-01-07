@@ -25,6 +25,11 @@
     color: var(--white);
 
     @include Nunito_16_300;
+    @include transition;
+
+    &:hover {
+      color: var(--light-blue);
+    }
   }
 }
 

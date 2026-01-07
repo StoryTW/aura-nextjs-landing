@@ -1,5 +1,5 @@
 'use client'
-import { FC, useState } from 'react';
+import { FC, JSX, useState } from 'react';
 import clsx from 'clsx';
 import styles from './FaqItem.module.scss';
 import { AnimatePresence, motion } from 'motion/react';
@@ -8,7 +8,7 @@ import IconPlus from '@/assets/icons/icon_plus.svg?react';
 
 interface IFaqItem {
   question: string;
-  answer: string;
+  answer: string | JSX.Element;
 }
 
 export const FaqItem: FC<IFaqItem> = ({

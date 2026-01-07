@@ -1,6 +1,7 @@
-import { Button } from '@/components/ui/Button/Button'
-import styles from './HowItWorksSection.module.scss'
 import { HowItWorksCard } from '@/components/common/HowItWorksCard/HowItWorksCard'
+import { ButtonLink } from '@/components/ui/ButtonLink/ButtonLink'
+import { REGISTER_LINK } from '@/utils/links'
+import styles from './HowItWorksSection.module.scss'
 
 const DATA = [
   {
@@ -56,9 +57,9 @@ export default function HowItWorksSection() {
             </div>
           </div>
 
-          <Button variant='primary' size='s'>
+          <ButtonLink href={REGISTER_LINK} variant='primary' size='s' target='_blank'>
             Зарегестрироваться
-          </Button>
+          </ButtonLink>
         </div>
       </div>
     </section>

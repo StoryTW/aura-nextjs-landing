@@ -1,0 +1,75 @@
+.btn {
+  cursor: pointer;
+  border-radius: 10px;
+
+  border: none;
+
+  user-select: none;
+  touch-action: manipulation;
+  text-align: center;
+
+  color: var(--white);
+
+  @include Nunito_20_400;
+  @include transition;
+
+  @include respond(tabletS) {
+    font-size: 18px;
+  }
+
+  &.primary {
+    background-color: var(--btn-color-primary);
+
+    &:hover {
+      background: var(--btn-color-primary-hover);
+    }
+
+    &:focus {
+      background: var(--btn-color-primary-hover);
+    }
+
+    &:active {
+      background: var(--btn-color-primary-hover);
+    }
+
+    &:disabled {
+      background: var(--btn-color-primary-disabled);
+    }
+  }
+
+  &.secondary {
+    background-color: var(--btn-color-secondary);
+
+    &:hover {
+      background: var(--btn-color-secondary-hover);
+    }
+
+    &:focus {
+      background: var(--btn-color-secondary-hover);
+    }
+
+    &:active {
+      background: var(--btn-color-secondary-hover);
+    }
+
+    &:disabled {
+      background: var(--btn-color-secondary-disabled);
+    }
+  }
+
+  &.s {
+    padding: 16px;
+
+    @include respond(tabletS) {
+      padding: 12px;
+    }
+  }
+
+  &.l {
+    padding: 24px;
+
+    @include respond(tabletS) {
+      padding: 16px;
+    }
+  }
+}
